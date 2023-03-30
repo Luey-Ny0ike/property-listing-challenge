@@ -6,5 +6,5 @@ class Property < ApplicationRecord
   has_one :valuation
 
   # Validations
-  validates_presence_of :name, :property_type, :description, :bedrooms, :bathrooms
+  validates_presence_of :name, :property_type, :description
 end
