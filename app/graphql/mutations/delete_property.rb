@@ -10,7 +10,7 @@ module Mutations
         property = Property.find(id)
         property.destroy
         { deleted: true }
-      rescue ActiveRecord::RecordNotFound => e
+      rescue ActiveRecord::RecordNotFound
         GraphQL::ExecutionError.new("Property with ID #{id} was not found.")
       rescue ActiveRecord::RecordNotDestroyed => e
         GraphQL::ExecutionError.new("Failed to delete. Message: #{e.message}")
