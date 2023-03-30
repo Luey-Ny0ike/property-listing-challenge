@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :property do
-    name { "MyString" }
-    property_type { "MyString" }
-    description { "MyText" }
-    bedrooms { 1 }
-    bathrooms { 1 }
-    free_from { "2023-03-30" }
+    name { Faker::FunnyName.four_word_name }
+    property_type { Property::PROPERTY_TYPES.sample }
+    description { Faker::TvShows::FinalSpace.quote }
+    bedrooms { Faker::Number.between(from: 1, to: 10) }
+    bathrooms { Faker::Number.between(from: 1, to: 4) }
+    free_from { Faker::Date.backward(days: 30) }
   end
 end

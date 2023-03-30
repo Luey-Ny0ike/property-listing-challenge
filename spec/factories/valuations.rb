@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :valuation do
-    value { "9.99" }
-    property { nil }
+    value { Faker::Number.within(range: 10000..3000000) }
+    valuation_date { Faker::Date.backward(days: 30) }
+    property
   end
 end

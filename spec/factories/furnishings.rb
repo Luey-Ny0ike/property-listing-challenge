@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :furnishing do
-    property { nil }
-    description { "MyText" }
+    property
+    description { Faker::TvShows::RickAndMorty.quote }
   end
 end
