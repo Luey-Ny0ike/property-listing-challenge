@@ -1,24 +1,48 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Property Listing Management App(GraphQL + Rails API)
 
-Things you may want to cover:
+This app utilises the power of rails & GraphQL combo. It is a Property Listing Management mock app that allows users to perform CRUD(Create Read Update Delete) on Properties, Furnishings and Valuations. The purpose of the app was to get my hands dirty on the core concepts of GraphQL like Types, Queries, Mutations and so on. Let's get it running on your machine
 
-* Ruby version
+### Setup
 
-* System dependencies
+To get started with this project, follow these steps:
 
-* Configuration
+Clone this repository to your local machine:
 
-* Database creation
+Install Ruby 2.7.2 and Rails 6.1.7 if not already installed.
 
-* Database initialization
+`git clone https://github.com/Luey-Ny0ike/property-listing-challenge.git`
 
-* How to run the test suite
+Navigate to the project directory:
 
-* Services (job queues, cache servers, search engines, etc.)
+`cd property-listing-challenge`
 
-* Deployment instructions
+Install the required gems:
 
-* ...
+`bundle install`
+
+Setup the database:
+
+`rails db:setup`
+
+or if you prefer:
+
+`rails db:create`
+
+`rails db:migrate`
+
+`rails db:seed`
+
+Start the server
+`rails s`
+
+That's it. If all previous steps were successful, you should be able to access the api from a single endpoint. http://localhost:3000/graphql. The end point is a post request.
+
+### Contributing
+
+Contributions to this project are welcome! To contribute, please fork the repository and submit a pull request.
+
+### License
+
+This project is licensed under the MIT License.
